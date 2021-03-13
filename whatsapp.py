@@ -25,7 +25,7 @@ if __name__ == "__main__":
     print('\n\n')
     
     # Set Limit here
-    limit = 5
+    limit = None
     
     start_time = time()
     # Get Bot Object

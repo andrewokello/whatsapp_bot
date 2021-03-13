@@ -17,6 +17,7 @@ Selenium is used mainly for automating web applications for testing purposes, bu
 
   - Send a specific message to a particular contact.
   - One can send a single message to multiple contacts.
+  - One can set a limit to the number of contacts they want to send to.
   - Save the contact name, number in a csv file and save it in the same directory.
   
 ### Requirements
@@ -35,10 +36,10 @@ Selenium is used mainly for automating web applications for testing purposes, bu
 
 * Replace the drivers in the folder in the project
 
-* Install selenium on python3 on using
+* Install the requirements on python3 on using on your preferred terminal.
 
   ```sh
-  $ pip3 install selenium
+  $ pip3 install -r requirements.txt
   ```
 
 * Open web_whatsapp_bot.py with your favorite text editor
@@ -47,7 +48,11 @@ Selenium is used mainly for automating web applications for testing purposes, bu
 
 * Create the list of the phone number with the country prefix in a list of integers format (without any symbols or spaces).
 
+* The Contacts file needs to be a CSV file with the following column names: name ; phone number (please make sure there is no space before the column names)
+
 * If you want to attach a Document, add the document to the PDFs folder and name it. Change this name in Line 71 on functions.py
+
+* If you want to set a Limit to the number of contacts to message, change this on Line 28 on whatsapp.py
 
 * Run whatsapp.py using Python3
 
