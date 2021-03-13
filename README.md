@@ -1,29 +1,23 @@
 # WhatsApp Bot
 
-This is a simple Web WhatsApp Bot developed in python using Selenium. 
+This is a simple Web WhatsApp Bot developed in python using Selenium.
+Heavily inspired by Harshit Sidhwa and Julián Flores and most of this readme document is a version of theirs.
+For instructions or information on their implementation, please refer to https://github.com/harshitsidhwa/WhatsApp-bot-selenium/blob/master/README.md and https://github.com/robotfpv/web-whatsapp-bot/blob/master/README.md 
+
 Selenium is used mainly for automating web applications for testing purposes, but is certainly not limited to just that. Boring web-based administration tasks can (and should!) be automated as well.
 
-Selenium has the support of some of the largest browser vendors who have taken (or are taking) steps to make Selenium a native part of their browser. It is also the core technology in countless other browser automation tools, APIs and frameworks.
-
   - Send messages to family, friends and contacts automatically
-  - Send specific message at specified time for all choosen contacts
-  - Send the message in group also
-
-   >Disclaimer - This article is for education purpose only. We didn’t share any blame for the misuse of this program.
+  - Send documents to family, friends and contacts
+  
+   >Disclaimer - This project is for education purpose only. I do not condon misuse.
 
    >Warning – These steps might get you banned permanently from using Whatsapp. So, use it wisely.
 
 # Features!
 
-  - Send a specific message to a particular contact at any time of the day
-  - One can send a single message to multiple contacts over a specific time
-  - Multiple messages to multiple contacts
-  - It offers a delay so that WhatsApp can detect your are sending a URL and show its pop-up description.
-  - It can search a contact from the list if the contact isn't present in the recent chats
-  - Save the contact name, number in a xls file and save it in the same directory.
-  - Change the message along with time in the whatsapp.py
-  - You can add multiple messages
-  - The Script can also search for the contact in the new chat list and then send message if the contact is not found in the recent chat list.
+  - Send a specific message to a particular contact.
+  - One can send a single message to multiple contacts.
+  - Save the contact name, number in a csv file and save it in the same directory.
   
 ### Requirements
 
@@ -31,8 +25,6 @@ Selenium has the support of some of the largest browser vendors who have taken (
 * [Selenium](https://github.com/SeleniumHQ/selenium) - Selenium for web automation
 * Selenium requires a driver to interface with the chosen browser.
 > For [Click for Chrome](https://sites.google.com/a/chromium.org/chromedriver/downloads)
-> For [Click for FireFox](https://github.com/mozilla/geckodriver/releases)
-> For [Click for safari](https://webkit.org/blog/6900/webdriver-support-in-safari-10)
 
 
 ### Instructions
@@ -55,12 +47,13 @@ Selenium has the support of some of the largest browser vendors who have taken (
 
 * Create the list of the phone number with the country prefix in a list of integers format (without any symbols or spaces).
 
+* If you want to attach a Document, add the document to the PDFs folder and name it. Change this name in Line 71 on functions.py
+
 * Run whatsapp.py using Python3
 
   ```sh
   $ python3 whatsapp.py
   ```
-* If you are running it later on, make sure you set the environment variable again
 
 * When the browser is opened web.whatsapp.com will be opened and will ask to scan a QR code when you its first time
 
