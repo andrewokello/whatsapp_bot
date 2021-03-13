@@ -1,0 +1,6 @@
+# Remove PDFs used in testing
+*pdf
+# Remove Contacts used in testing
+*csv
+# Remove Juypter Notebooks used in testing
+*ipynb
