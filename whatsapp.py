@@ -38,3 +38,5 @@ if __name__ == "__main__":
     app.main_func(app.get_contacts(limit=limit))
 
     print('\nTook {}'.format(format_timespan(round(time() - start_time, 2))))
+    
+    app.driver.quit()
