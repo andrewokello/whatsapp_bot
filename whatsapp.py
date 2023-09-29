@@ -11,6 +11,7 @@ Additionally, using this script may involve a risk of you being banned and even 
 Use this script at your own risk!
 """
 
+
 from functions import *
 
 
@@ -23,20 +24,20 @@ if __name__ == "__main__":
     print('Lets Do it!!!!!')
     print('='*80)
     print('\n\n')
-    
+
     # Set Limit here
     limit = None
-    
+
     start_time = time()
     # Get Bot Object
     app = WhatsappBot()
 
     # Open Whatsapp
     app.open_whatsapp()
-    
+
     # Run Main Function
     app.main_func(app.get_contacts(limit=limit))
 
-    print('\nTook {}'.format(format_timespan(round(time() - start_time, 2))))
-    
+    print(f'\nTook {format_timespan(round(time() - start_time, 2))}')
+
     app.driver.quit()

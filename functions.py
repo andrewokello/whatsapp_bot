@@ -117,7 +117,8 @@ class WhatsappBot:
                     failed: list
         """
         self.driver.get(
-            "https://web.whatsapp.com/send?phone={}&source=&data=#".format(contact_number))
+            f"https://web.whatsapp.com/send?phone={contact_number}&source=&data=#"
+        )
         sleep(15)
 
         try:
@@ -142,7 +143,6 @@ class WhatsappBot:
                 EC.presence_of_element_located((elements.send_attach['type'], elements.send_attach['name']))).click()
             sleep(10)
         except Exception as e:
-            pass
             print(traceback.print_exc())
 
     def main_func(self, contacts: dict):
@@ -154,7 +154,7 @@ class WhatsappBot:
         sent, failed = [], []
         with alive_bar(len(contacts)) as bar:
             for index, contact in contacts.iterrows():
-                bar.text('Sending Message to {}'.format(contact['name']))
+                bar.text(f"Sending Message to {contact['name']}")
                 sleep(5)
                 self.send_message(
                     contact['name'], contact['phone number'], sent, failed)
